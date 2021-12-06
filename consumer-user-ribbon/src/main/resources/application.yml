@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: true
+  application:
+    name: eureka-consumer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+

@@ -1,0 +1,19 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: gateway-zuul
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+zuul:
+  routes:
+    eureka-consumer: /user/**
+  ## ignored-services: eureka-consumer 或略代理服务，多个可使用,分隔，'*'为忽略所有微服务
+

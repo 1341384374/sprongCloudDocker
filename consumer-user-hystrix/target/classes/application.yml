@@ -1,0 +1,27 @@
+server:
+  port: 8083
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: true
+  application:
+    name: eureka-hystrix
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
