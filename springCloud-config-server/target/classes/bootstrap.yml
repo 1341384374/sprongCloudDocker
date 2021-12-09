@@ -1,0 +1,3 @@
+encrypt:
+  key: foo #对称加密密钥
+

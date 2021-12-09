@@ -1,0 +1,12 @@
+spring:
+  application:
+    # 对应config server所获取的配置文件的{application}
+    name: test
+  cloud:
+    config:
+      uri: http://localhost:8088/
+      # profile对应config server所获取的配置文件中的{profile}
+      profile: dev
+      # 指定Git仓库的分支，对应config server所获取的配置文件的{lable}
+      label: master
+
