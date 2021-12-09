@@ -18,6 +18,8 @@
         <module>consumer-user-hystrix-turbine</module>
         <module>gateway-zuul</module>
         <module>file-upload</module>
+        <module>springCloud-config-server</module>
+        <module>springCloud-config-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

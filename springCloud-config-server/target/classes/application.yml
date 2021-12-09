@@ -1,0 +1,12 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/1341384374/sprongCloudDocker
+          username: 1341384374
+          password: dxyxy1314
